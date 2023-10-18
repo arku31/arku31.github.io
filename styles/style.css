@@ -1,0 +1,216 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    height: 30vh;
+    background-color: #c0c0c0; /* Temporary color for the brick image */
+    background-image: url("../img/header.png");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header h1 {
+    color: white;
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+}
+.maincontent {
+    width: 90%;
+
+    align-items: center;
+}
+.description, .criteria, .merits, .contact {
+    padding: 50px;
+    text-align: center;
+}
+
+.description p, .advantages p, .criteria p, .merits p {
+    color: #333;
+    font-size: 1.2em;
+}
+
+.icon {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background-color: #e0e0e0;
+    margin: 20px;
+    border-radius: 50%;
+}
+
+.merits .sub-header {
+    font-weight: bold;
+}
+
+.prices {
+
+    padding: 20px; /* optional, to give some padding to the main container */
+}
+
+.price_list {
+    display: flex;
+    justify-content: space-between; /* this will distribute space equally between the columns */
+    list-style-type: none; /* to remove the default bullet points of the <ul> */
+    padding: 0; /* to remove default padding of <ul> */
+    margin: 0; /* to remove default margin of <ul> */
+}
+
+.price_item {
+    flex: 1; /* each item will take equal space */
+    margin: 0 10px; /* some space between items for breathing room, adjust as needed */
+    text-align: center; /* center the text placeholder below each image */
+}
+
+.price_item_img {
+    width: 100%; /* make the div take full width of its parent */
+    max-width: 300px; /* max width for the image container, adjust as needed */
+    margin: 0 auto; /* center the image container */
+}
+
+.price_item_img img {
+    width: 100%; /* scale the image to the width of its container */
+    height: auto; /* maintain image aspect ratio */
+    max-height: 200px; /* you can set a max height if needed */
+    display: block; /* remove default spaces below images */
+    margin: 0 auto; /* center the image */
+}
+
+/* additional styling for the placeholder text */
+.price_item p {
+    margin-top: 10px; /* space between image and text */
+    font-size: 14px; /* adjust font-size if needed */
+    color: #555; /* a grayish color for the placeholder text */
+}
+
+
+.advantages {
+    width: 100%;
+    padding: 20px; /* Optional padding for the main container. Adjust as necessary. */
+}
+
+.advantages h2, .prices h2 {
+    text-align: center; /* Center the heading */
+    font-size: 32px; /* Adjust the font size for the heading if needed */
+    margin-bottom: 30px; /* Some space between the heading and the list */
+}
+
+.advantages_list {
+    display: flex;
+    justify-content: space-between; /* Distributes space equally between the columns */
+    list-style-type: none; /* Removes the default bullet points of the <ul> */
+    padding: 0; /* Removes default padding of <ul> */
+    margin: 0; /* Removes default margin of <ul> */
+    flex-wrap: wrap; /* Allows the list items to wrap to the next row if there's not enough space */
+}
+
+.advantages_list li {
+    flex: 1; /* Each item will take equal space */
+    margin: 0 10px; /* Some space between items for a breathing room. Adjust as necessary. */
+    max-width: 23%; /* To ensure that there are 4 columns with equal space around */
+    text-align: center; /* Center the content within each list item */
+    padding: 10px; /* Padding around each list item. Adjust as necessary. */
+    box-sizing: border-box;
+}
+
+.advantages_icon {
+    width: 100px; /* Set a fixed width for the icon. Adjust as necessary. */
+    height: 100px; /* Set a fixed height for the icon. Adjust as necessary. */
+    display: block; /* Makes the image a block element to remove default spaces below */
+    margin: 0 auto; /* Center the icon */
+    margin-bottom: 10px; /* Space between the icon and the title */
+}
+
+.advantages_title {
+    font-size: 18px; /* Adjust font size if necessary */
+    color: #333; /* Adjust font color if necessary */
+    margin-bottom: 10px; /* Space between the title and the text */
+}
+
+.advantages_text {
+    font-size: 14px; /* Adjust font size if necessary */
+    color: #555; /* A grayish color for the text. Adjust if necessary. */
+}
+
+@media (max-width: 768px) {
+    .advantages_list li {
+        max-width: 48%; /* Makes it two columns on tablet-sized screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .advantages_list li {
+        max-width: 100%; /* Single column on mobile-sized screens */
+    }
+}
+
+
+/* Основные стили для блока "contact" */
+.contact {
+    background-color: #f7f7f7; /* Светло-серый фон */
+    border-radius: 8px; /* Скругленные углы */
+    padding: 20px; /* Отступы внутри блока */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень блока */
+    max-width: 400px; /* Максимальная ширина блока */
+    margin: 0 auto; /* Центрирование блока */
+}
+
+.contact h2 {
+    font-size: 24px; /* Размер шрифта для заголовка */
+    color: #333; /* Цвет текста заголовка */
+    margin-bottom: 15px; /* Отступ от заголовка до контента */
+}
+
+/* Стили для телефона и электронной почты */
+.contact .phone, .contact .email {
+    font-size: 16px; /* Размер шрифта */
+    color: #555; /* Цвет текста */
+    margin-bottom: 10px; /* Отступ между строками */
+}
+
+/* Стили для ссылки на электронную почту */
+.contact .email a {
+    color: #007BFF; /* Синий цвет ссылки */
+    text-decoration: none; /* Убрать подчеркивание */
+    transition: color 0.3s; /* Плавное изменение цвета при наведении */
+}
+
+.contact .email a:hover {
+    color: #0056b3; /* Темно-синий цвет при наведении */
+}
+
+/* Стили для заголовка продукта (price_title) */
+.price_title {
+    font-size: 18px; /* Размер шрифта */
+    font-weight: bold; /* Жирное начертание */
+    color: #333; /* Цвет текста */
+    margin-top: 10px; /* Отступ сверху */
+    margin-bottom: 5px; /* Отступ снизу */
+    text-align: center; /* Выравнивание текста по центру */
+    text-transform: uppercase; /* Преобразование текста в верхний регистр */
+}
+
+/* Стили для описания цены (price_desc) */
+.price_desc {
+    width: 250px;
+    margin: auto;
+    font-size: 16px; /* Размер шрифта */
+    color: #555; /* Цвет текста */
+    text-align: center; /* Выравнивание текста по центру */
+    background-color: #f7f7f7; /* Светло-серый фон */
+    padding: 5px 10px; /* Отступы внутри блока */
+    border-radius: 5px; /* Скругленные углы */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень блока */
+}
+
+/* Добавим небольшой эффект при наведении на блок с ценой */
+.price_desc:hover {
+    background-color: #e7e7e7; /* Чуть более темный фон */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Больше тени */
+}
